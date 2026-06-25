@@ -19,15 +19,18 @@ The full PostgreSQL + Qdrant + Neo4j stack **cannot** run on Vercel serverless a
 
 The repo includes a root `vercel.json` that builds **only** `frontend/` (static files).
 
-### Vercel Dashboard settings
+### Vercel Dashboard settings (required)
 
 1. Import: `github.com/shekhar871/ayurveda-ai`
-2. **Root Directory:** leave as `.` (repo root) — `vercel.json` handles the frontend build
-3. **Framework Preset:** Other (or Vite — auto-detected from frontend)
-4. **Build Command:** `cd frontend && npm ci && npm run build` (auto from vercel.json)
-5. **Output Directory:** `frontend/dist`
-6. Environment variable (after API deploy in step 2):
+2. **Root Directory:** `frontend` ← **must be set to `frontend`**
+3. **Framework Preset:** Vite (auto-detected)
+4. **Build Command:** `npm run build` (default)
+5. **Output Directory:** `dist` (default)
+6. After API deploy (step 2), add environment variable:
    - `VITE_API_URL` = `https://your-api.onrender.com` (no trailing slash)
+7. Redeploy
+
+> Do **not** deploy from repo root — Vercel will try to bundle the Python backend.
 
 ### Option A — Vercel CLI
 

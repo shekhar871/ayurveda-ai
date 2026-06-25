@@ -1,9 +1,0 @@
-{
-  "name": "ayurveda-ai",
-  "private": true,
-  "description": "AyurVeda AI — Vercel builds frontend only",
-  "scripts": {
-    "build": "cd frontend && npm ci && npm run build",
-    "vercel-build": "cd frontend && npm ci && npm run build"
-  }
-}
