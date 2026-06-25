@@ -15,6 +15,20 @@ The full PostgreSQL + Qdrant + Neo4j stack **cannot** run on Vercel serverless a
 
 ## 1. Deploy frontend to Vercel
 
+> **Important:** Vercel hosts the **React UI only**. Do NOT deploy the Python backend on Vercel — it exceeds the 500 MB serverless limit.
+
+The repo includes a root `vercel.json` that builds **only** `frontend/` (static files).
+
+### Vercel Dashboard settings
+
+1. Import: `github.com/shekhar871/ayurveda-ai`
+2. **Root Directory:** leave as `.` (repo root) — `vercel.json` handles the frontend build
+3. **Framework Preset:** Other (or Vite — auto-detected from frontend)
+4. **Build Command:** `cd frontend && npm ci && npm run build` (auto from vercel.json)
+5. **Output Directory:** `frontend/dist`
+6. Environment variable (after API deploy in step 2):
+   - `VITE_API_URL` = `https://your-api.onrender.com` (no trailing slash)
+
 ### Option A — Vercel CLI
 
 ```bash
@@ -22,27 +36,39 @@ cd frontend
 npm install
 npm run build
 
-# Set your backend URL (Railway/Render after step 2)
+# Set your backend URL (Render/Railway after step 2)
 vercel env add VITE_API_URL production
-# Example: https://ayurveda-api.up.railway.app
+# Example: https://ayurveda-ai-api.onrender.com
 
 vercel --prod
 ```
 
 ### Option B — Vercel Dashboard
 
-1. Import repo: `shekhar871/ayurveda-ai`
-2. Set **Root Directory** → `frontend`
-3. Framework: **Vite**
-4. Environment variable:
-   - `VITE_API_URL` = `https://your-api-host.com` (no trailing slash)
-5. Deploy
+Push to `main` — connected GitHub repo auto-deploys when `vercel.json` is present.
 
 `frontend/vercel.json` handles SPA routing.
 
 ---
 
-## 2. Deploy backend (Railway example)
+## 2. Deploy backend API (Render — free tier)
+
+The API **cannot** run on Vercel. Use Render with the included `Dockerfile.lite`:
+
+1. Go to [render.com](https://render.com) → **New** → **Blueprint**
+2. Connect repo `shekhar871/ayurveda-ai`
+3. Render reads `render.yaml` and deploys `ayurveda-ai-api`
+4. Copy the URL (e.g. `https://ayurveda-ai-api.onrender.com`)
+5. In Vercel → Settings → Environment Variables → set `VITE_API_URL` to that URL
+6. Redeploy Vercel frontend
+
+**Or manual Render deploy:**
+- New Web Service → Docker → `Dockerfile.lite`
+- Env: `APP_MODE=lite`, `EMBEDDING_DIM=384`, `PYTHONPATH=.`
+
+---
+
+## 2b. Deploy backend (Railway alternative)
 
 ```bash
 # From repo root — uses Dockerfile

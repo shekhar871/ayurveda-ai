@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ayurveda-ai-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.lite
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_MODE
+        value: lite
+      - key: EMBEDDING_DIM
+        value: "384"
+      - key: PYTHONPATH
+        value: .

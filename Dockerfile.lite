@@ -1,0 +1,33 @@
+# Lite API for Render / Railway (no Docker, no ML model downloads)
+FROM python:3.11-slim-bookworm
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl nodejs npm \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-lite.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src ./src
+COPY scripts ./scripts
+COPY data/corpus.json ./data/corpus.json
+COPY data/.gitkeep ./data/.gitkeep
+
+COPY frontend ./frontend/
+RUN cd frontend && npm ci && npm run build \
+    && apt-get purge -y npm && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+ENV APP_MODE=lite
+ENV EMBEDDING_DIM=384
+
+RUN python scripts/seed_corpus.py lite
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
+  CMD curl -f http://localhost:8000/health || exit 1
+
+CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT:-8000}"]

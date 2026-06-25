@@ -1,0 +1,23 @@
+# Vercel deploys FRONTEND ONLY (static React build).
+# The Python API must run on Render/Railway — see DEPLOYMENT.md
+
+src/
+scripts/
+tests/
+data/
+config/
+.venv/
+venv/
+__pycache__/
+*.py
+requirements.txt
+requirements-lite.txt
+docker-compose.yml
+Dockerfile
+Makefile
+run*.sh
+start-webapp.sh
+pytest.ini
+.env
+.env.full
+.github/
