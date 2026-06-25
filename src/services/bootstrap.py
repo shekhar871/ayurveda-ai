@@ -31,9 +31,48 @@ class AppState:
 _state: AppState | None = None
 
 
+async def _seed_lite_if_empty(lite: LiteBackend) -> None:
+    if lite._data.get("verses"):
+        return
+    import json
+    from pathlib import Path
+
+    from src.ingestion.text_splitter import chunk_to_envelopes
+
+    corpus_path = Path(__file__).resolve().parents[2] / "data" / "corpus.json"
+    if not corpus_path.is_file():
+        logger.warning("corpus.json missing — lite store empty")
+        return
+    records = json.loads(corpus_path.read_text(encoding="utf-8"))
+    embedder = LiteEmbedder()
+    envelopes = chunk_to_envelopes(records)
+    for env, rec in zip(envelopes, records):
+        env.metadata = rec.get("metadata", {})
+    vectors = await embedder.embed_batch([e.text for e in envelopes])
+    for env, vec in zip(envelopes, vectors):
+        await lite.upsert_verse(env, vec)
+        await lite.register_citation(env.grantha, env.sthana, env.adhyaya, env.shloka)
+    graph = {
+        "Bhringraj Taila": {"indicated_in": ["Khalitya", "Darunaka"], "contraindicated_for": ["Pitta aggravation", "Amlapitta", "Acidity"], "trials": 1, "citations": 2},
+        "Shatavari Swarasa": {"indicated_in": ["Amlapitta", "Acidity"], "contraindicated_for": [], "trials": 2, "citations": 2},
+        "Amalaki Rasayana": {"indicated_in": ["Amlapitta", "Acidity"], "contraindicated_for": [], "trials": 2, "citations": 2},
+        "Kamadudha Rasa": {"indicated_in": ["Amlapitta", "Acidity"], "contraindicated_for": [], "trials": 1, "citations": 1},
+        "Guduchi Kashaya": {"indicated_in": ["Amlapitta", "Acidity"], "contraindicated_for": [], "trials": 1, "citations": 1},
+        "Trikatu Churna": {"indicated_in": ["Kapha aggravation"], "contraindicated_for": ["Pitta aggravation", "Amlapitta", "Acidity"], "trials": 0, "citations": 1},
+        "Malayaja Taila": {"indicated_in": ["Darunaka"], "contraindicated_for": [], "trials": 1, "citations": 1},
+        "Yava Ahara": {"indicated_in": ["Sthoulya"], "contraindicated_for": [], "trials": 1, "citations": 1},
+        "Guggulu Yoga": {"indicated_in": ["Sthoulya"], "contraindicated_for": [], "trials": 2, "citations": 2},
+        "Triphala Kashaya": {"indicated_in": ["Sthoulya"], "contraindicated_for": [], "trials": 1, "citations": 1},
+    }
+    lite._data.setdefault("graph", {})["formulations"] = graph
+    lite._save()
+    logger.info("Seeded %d verses into lite store", len(envelopes))
+
+
 async def _init_lite(settings: Settings) -> AppState:
     lite = LiteBackend()
     await lite.connect()
+    await _seed_lite_if_empty(lite)
     await lite.ensure_collection()
 
     qdrant = LiteQdrantAdapter(lite)

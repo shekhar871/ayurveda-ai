@@ -57,7 +57,11 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(err.detail || `Request failed: ${res.status}`);
+    const detail = err.detail || res.statusText;
+    if (res.status === 405) {
+      throw new Error("Service unavailable. Please refresh and try again.");
+    }
+    throw new Error(typeof detail === "string" ? detail : `Request failed (${res.status})`);
   }
   return res.json();
 }

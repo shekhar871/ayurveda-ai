@@ -3,26 +3,29 @@
 @tailwind utilities;
 
 body {
-  @apply bg-cream text-bark antialiased min-h-screen;
+  @apply bg-stone-50 text-stone-900 antialiased min-h-screen font-sans;
 }
 
 @layer components {
   .card {
-    @apply bg-white/80 backdrop-blur rounded-2xl border border-cream-dark shadow-sm p-6;
+    @apply bg-white rounded-lg border border-stone-200 shadow-sm p-6;
   }
   .btn-primary {
-    @apply bg-leaf hover:bg-leaf-dark text-white font-medium px-5 py-2.5 rounded-xl transition shadow-sm disabled:opacity-50;
+    @apply bg-emerald-800 hover:bg-emerald-900 text-white text-sm font-medium px-5 py-2.5 rounded-md transition disabled:opacity-50;
   }
   .btn-secondary {
-    @apply bg-saffron/15 hover:bg-saffron/25 text-bark font-medium px-5 py-2.5 rounded-xl transition border border-saffron/30;
+    @apply bg-white hover:bg-stone-50 text-stone-700 text-sm font-medium px-5 py-2.5 rounded-md transition border border-stone-300;
   }
   .input-field {
-    @apply w-full rounded-xl border border-cream-dark bg-white px-4 py-2.5 text-bark placeholder:text-bark-muted/60 focus:outline-none focus:ring-2 focus:ring-leaf/40;
+    @apply w-full rounded-md border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-700/25 focus:border-emerald-700;
   }
-  .tab-active {
-    @apply bg-leaf text-white shadow;
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium rounded-md transition;
   }
-  .tab-inactive {
-    @apply text-bark-muted hover:bg-cream-dark/80;
+  .nav-active {
+    @apply bg-emerald-800 text-white;
+  }
+  .nav-idle {
+    @apply text-stone-600 hover:text-stone-900 hover:bg-stone-100;
   }
 }

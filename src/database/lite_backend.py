@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import uuid
 from pathlib import Path
 from typing import Any
@@ -9,7 +10,13 @@ from typing import Any
 from src.embeddings.hash_embedder import hash_embed, hash_embed_batch
 from src.ingestion.text_splitter import VerseEnvelope
 
-STORE_PATH = Path(__file__).resolve().parents[2] / "data" / "lite_store.json"
+_REPO_DATA = Path(__file__).resolve().parents[2] / "data" / "lite_store.json"
+
+
+def _default_store_path() -> Path:
+    if os.getenv("VERCEL") or os.getenv("VERCEL_ENV"):
+        return Path("/tmp/ayur_lite_store.json")
+    return _REPO_DATA
 
 
 def _cosine(a: list[float], b: list[float]) -> float:
@@ -23,7 +30,7 @@ class LiteBackend:
     """File-backed store — runs with zero Docker services."""
 
     def __init__(self, store_path: Path | None = None) -> None:
-        self._path = store_path or STORE_PATH
+        self._path = store_path or _default_store_path()
         self._data: dict[str, Any] = {
             "verses": [],
             "citations": [],

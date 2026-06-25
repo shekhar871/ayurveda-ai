@@ -1,15 +1,15 @@
-# Root-anchored paths ONLY — do NOT use bare "src/" (it blocks frontend/src/)
+# Exclude heavy Docker stack only — keep src/, api/, data/corpus.json for serverless API
 /requirements.txt
-/requirements-lite.txt
-/src/
-/scripts/
-/tests/
-/data/
 /docker-compose.yml
 /Dockerfile
 /Dockerfile.lite
 /render.yaml
+/scripts/
+/tests/
+/data/lite_store.json
+/data/manuscripts/
 /.env
 /.env.full
 /.venv/
 /pytest.ini
+/frontend/node_modules/
