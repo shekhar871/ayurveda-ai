@@ -119,7 +119,7 @@ PYTHONPATH=. pytest tests/ -q
 
 | Component | Platform | Guide |
 |-----------|----------|-------|
-| **Frontend** | Vercel | [DEPLOYMENT.md](./DEPLOYMENT.md) — set **Root Directory = `frontend`** |
+| **Frontend** | Vercel | [DEPLOYMENT.md](./DEPLOYMENT.md) — repo root, reset Build overrides |
 | **API + DB** | Railway / Render / Fly.io | Docker Compose or Dockerfile |
 
 ---

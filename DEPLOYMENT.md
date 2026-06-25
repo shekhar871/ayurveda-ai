@@ -22,15 +22,17 @@ The repo includes a root `vercel.json` that builds **only** `frontend/` (static 
 ### Vercel Dashboard settings (required)
 
 1. Import: `github.com/shekhar871/ayurveda-ai`
-2. **Root Directory:** `frontend` ← **must be set to `frontend`**
-3. **Framework Preset:** Vite (auto-detected)
-4. **Build Command:** `npm run build` (default)
-5. **Output Directory:** `dist` (default)
-6. After API deploy (step 2), add environment variable:
+2. **Root Directory:** leave **empty** (repo root `.`) — do NOT set to `frontend`
+3. **Settings → Build & Development:** turn **OFF** all overrides (Install Command, Build Command, Output Directory) so `vercel.json` at repo root is used
+4. Expected commands (from `vercel.json`):
+   - Install: `npm ci --prefix frontend`
+   - Build: `npm run build --prefix frontend`
+   - Output: `frontend/dist`
+5. After API deploy (step 2), add environment variable:
    - `VITE_API_URL` = `https://your-api.onrender.com` (no trailing slash)
-7. Redeploy
+6. Redeploy
 
-> Do **not** deploy from repo root — Vercel will try to bundle the Python backend.
+> **Common mistake:** an old `.vercelignore` used `src/` which deleted `frontend/src/` from the upload. Fixed — patterns are now root-anchored (`/src/`).
 
 ### Option A — Vercel CLI
 

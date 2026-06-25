@@ -1,0 +1,15 @@
+# Root-anchored paths ONLY — do NOT use bare "src/" (it blocks frontend/src/)
+/requirements.txt
+/requirements-lite.txt
+/src/
+/scripts/
+/tests/
+/data/
+/docker-compose.yml
+/Dockerfile
+/Dockerfile.lite
+/render.yaml
+/.env
+/.env.full
+/.venv/
+/pytest.ini
