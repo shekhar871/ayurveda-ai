@@ -1,0 +1,142 @@
+[
+  {
+    "text": "भृङ्गराज केश्यो रुक्षः कटु तीक्ष्णोष्णो लघुः स्मृतः। खालित्ये दारुणके चापि प्रयोज्यो भृङ्गराजकः॥",
+    "grantha": "AshtangaHridayam", "sthana": "Sutrasthana", "adhyaya": 15, "shloka": 42, "language": "san",
+    "metadata": {"topics": ["hair", "khalitya", "bhringraj"], "conditions": ["Khalitya", "Darunaka"], "formulation": "Bhringraj Taila", "dravya": "Bhringraj", "content_type": "indication"}
+  },
+  {
+    "text": "Bhringraj is traditionally used to promote thick hair growth and address Khalitya (hair loss).",
+    "grantha": "ClinicalCompendium", "sthana": "Herbs", "adhyaya": 1, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["hair", "khalitya", "bhringraj"], "conditions": ["Khalitya"], "formulation": "Bhringraj Taila", "dravya": "Bhringraj", "content_type": "indication"}
+  },
+  {
+    "text": "भृङ्गराज उष्णतीक्ष्णः कटुको लघुश्च। पित्तप्रकोपे न योज्यः स भृङ्गराजः॥",
+    "grantha": "AshtangaHridayam", "sthana": "Sutrasthana", "adhyaya": 15, "shloka": 43, "language": "san",
+    "metadata": {"topics": ["pitta", "contraindication", "bhringraj"], "conditions": ["Pitta aggravation"], "formulation": "Bhringraj Taila", "dravya": "Bhringraj", "content_type": "contraindication"}
+  },
+  {
+    "text": "Bhringraj Taila is contraindicated when Pitta is aggravated. Its Ushna (heating) and Katu (pungent) qualities worsen burning sensations, acidity, and inflammatory flare-ups.",
+    "grantha": "ClinicalCompendium", "sthana": "Contraindications", "adhyaya": 2, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["pitta", "contraindication", "bhringraj"], "conditions": ["Pitta aggravation"], "formulation": "Bhringraj Taila", "content_type": "contraindication"}
+  },
+  {
+    "text": "पित्तप्रकोपे उपशमार्थं शीत मधुर लघु द्रव्याणि प्रयोज्यानि। उष्णतीक्ष्णकटु लवणानि वर्जयेत्॥",
+    "grantha": "AshtangaHridayam", "sthana": "Sutrasthana", "adhyaya": 12, "shloka": 8, "language": "san",
+    "metadata": {"topics": ["pitta", "diet", "pacification"], "conditions": ["Pitta aggravation"], "content_type": "guidance"}
+  },
+  {
+    "text": "When Pitta is aggravated, favor cooling (Shita), sweet (Madhura), and light foods. Avoid heating (Ushna), pungent (Katu), sharp (Tikshna), and excess salt (Lavana).",
+    "grantha": "ClinicalCompendium", "sthana": "Dietetics", "adhyaya": 3, "shloka": 2, "language": "en",
+    "metadata": {"topics": ["pitta", "diet", "contraindication", "pacification"], "conditions": ["Pitta aggravation"], "content_type": "guidance"}
+  },
+  {
+    "text": "Formulations with Ushna Virya such as Bhringraj Taila, Trikatu churna, and excessive ginger must be avoided during Pitta aggravation.",
+    "grantha": "ClinicalCompendium", "sthana": "Contraindications", "adhyaya": 2, "shloka": 3, "language": "en",
+    "metadata": {"topics": ["pitta", "contraindication"], "conditions": ["Pitta aggravation"], "formulation": "Trikatu Churna", "content_type": "contraindication"}
+  },
+  {
+    "text": "दारुणके खल्वपि मलयजाद्यैः स्नेहैः प्रदेहैश्चोपशमं यान्ति।",
+    "grantha": "AshtangaHridayam", "sthana": "Sutrasthana", "adhyaya": 23, "shloka": 14, "language": "san",
+    "metadata": {"topics": ["dandruff", "darunaka"], "conditions": ["Darunaka"], "formulation": "Malayaja Taila", "content_type": "indication"}
+  },
+  {
+    "text": "Darunaka (dandruff) responds to oily unctuous applications such as Malayaja-based oils and gentle external lepas.",
+    "grantha": "ClinicalCompendium", "sthana": "Herbs", "adhyaya": 4, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["dandruff", "darunaka"], "conditions": ["Darunaka"], "formulation": "Malayaja Taila", "content_type": "indication"}
+  },
+  {
+    "text": "तत्र प्रथमे वयसि बलं वर्णश्च वर्धते।",
+    "grantha": "AshtangaHridayam", "sthana": "Sutrasthana", "adhyaya": 2, "shloka": 5, "language": "san",
+    "metadata": {"topics": ["balya", "youth"], "conditions": [], "content_type": "general"}
+  },
+  {
+    "text": "वातप्रकोपे स्निग्धोष्णमधुराणि। पित्तप्रकोपे शीतानि मधुरानि। कफप्रकोपे रूक्षोष्ण कटुकाणि॥",
+    "grantha": "CharakaSamhita", "sthana": "Sutrasthana", "adhyaya": 18, "shloka": 50, "language": "san",
+    "metadata": {"topics": ["vata", "pitta", "kapha", "dosha", "diet"], "conditions": ["Pitta aggravation", "Vata aggravation", "Kapha aggravation"], "content_type": "guidance"}
+  },
+  {
+    "text": "Trikatu (Pippali, Maricha, Shunthi) is heating and aggravates Pitta. Contraindicated in Pitta disorders, hyperacidity, and inflammatory skin conditions.",
+    "grantha": "ClinicalCompendium", "sthana": "Contraindications", "adhyaya": 5, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["pitta", "contraindication"], "conditions": ["Pitta aggravation"], "formulation": "Trikatu Churna", "content_type": "contraindication"}
+  },
+  {
+    "text": "शीतलं मधुरं द्रव्यं पित्तहरं विद्यात्। यत् उष्णं कटुकं तत् पित्तवर्धनम्॥",
+    "grantha": "SushrutaSamhita", "sthana": "Sutrasthana", "adhyaya": 42, "shloka": 10, "language": "san",
+    "metadata": {"topics": ["pitta", "qualities", "guna"], "conditions": ["Pitta aggravation"], "content_type": "guidance"}
+  },
+  {
+    "text": "Cooling and sweet substances are Pitta-hara (pacifying). Heating and pungent substances increase Pitta and should be avoided when Pitta is provoked.",
+    "grantha": "ClinicalCompendium", "sthana": "Dravyaguna", "adhyaya": 1, "shloka": 8, "language": "en",
+    "metadata": {"topics": ["pitta", "qualities"], "conditions": ["Pitta aggravation"], "content_type": "guidance"}
+  },
+  {
+    "text": "अम्लपित्ते शीतं मधुरं लघु च। शतावरी स्वरसः प्रयोज्यः पित्तशामकः॥",
+    "grantha": "AshtangaHridayam", "sthana": "Chikitsasthana", "adhyaya": 8, "shloka": 12, "language": "san",
+    "metadata": {"topics": ["acidity", "amlapitta", "pitta", "digestion"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Shatavari Swarasa", "dravya": "Shatavari", "content_type": "indication"}
+  },
+  {
+    "text": "For Amlapitta (acidity and hyperacidity), Shatavari juice is indicated. It is cooling (Shita), sweet (Madhura), and pacifies aggravated Pitta in the stomach.",
+    "grantha": "ClinicalCompendium", "sthana": "Digestive", "adhyaya": 1, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["acidity", "amlapitta", "hyperacidity", "remedy"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Shatavari Swarasa", "dravya": "Shatavari", "content_type": "indication"}
+  },
+  {
+    "text": "अमलकी रसः पित्तहरो मधुरो लघुश्च। अम्लपित्तदाहे प्रयोज्यः शीतवीर्यत्वात्॥",
+    "grantha": "CharakaSamhita", "sthana": "Chikitsasthana", "adhyaya": 15, "shloka": 22, "language": "san",
+    "metadata": {"topics": ["acidity", "amlapitta", "heartburn"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Amalaki Rasayana", "dravya": "Amalaki", "content_type": "indication"}
+  },
+  {
+    "text": "Amalaki (Indian gooseberry) is sweet, cooling, and Pitta-pacifying. Fresh Amalaki juice is traditionally used for acidity, burning sensation, and Amlapitta.",
+    "grantha": "ClinicalCompendium", "sthana": "Digestive", "adhyaya": 2, "shloka": 3, "language": "en",
+    "metadata": {"topics": ["acidity", "amlapitta", "burning"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Amalaki Rasayana", "dravya": "Amalaki", "content_type": "indication"}
+  },
+  {
+    "text": "कामदुधा रसो अम्लपित्ते अग्निमान्द्ये च हितः। शीतवीर्यः पित्तघ्नः सुकुमार देहानाम्॥",
+    "grantha": "BhaishajyaRatnavali", "sthana": "Amlapitta", "adhyaya": 1, "shloka": 5, "language": "san",
+    "metadata": {"topics": ["acidity", "amlapitta", "digestion"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Kamadudha Rasa", "dravya": "Mukta Shukti Bhasma", "content_type": "indication"}
+  },
+  {
+    "text": "Kamadudha Rasa is beneficial in Amlapitta (acidity) and low digestive fire. It is cooling in potency and reduces Pitta-related burning in the upper digestive tract.",
+    "grantha": "ClinicalCompendium", "sthana": "Digestive", "adhyaya": 3, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["acidity", "amlapitta", "hyperacidity", "remedy"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Kamadudha Rasa", "content_type": "indication"}
+  },
+  {
+    "text": "गुडूची कषायं पित्ताम्लपित्तघ्नं। दाह तृष्णा चर्द्यादौ प्रयोज्यम्॥",
+    "grantha": "AshtangaHridayam", "sthana": "Chikitsasthana", "adhyaya": 8, "shloka": 18, "language": "san",
+    "metadata": {"topics": ["acidity", "amlapitta", "burning", "nausea"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Guduchi Kashaya", "dravya": "Guduchi", "content_type": "indication"}
+  },
+  {
+    "text": "Guduchi decoction reduces Pitta-type acidity (Amlapitta), burning sensation, thirst, and nausea. Use as cooling digestive support.",
+    "grantha": "ClinicalCompendium", "sthana": "Digestive", "adhyaya": 4, "shloka": 2, "language": "en",
+    "metadata": {"topics": ["acidity", "amlapitta", "remedy"], "conditions": ["Amlapitta", "Acidity"], "formulation": "Guduchi Kashaya", "dravya": "Guduchi", "content_type": "indication"}
+  },
+  {
+    "text": "मेदोहराणि लघुष्णानि कटुकानि च। यवान् कोद्रवाः प्रयोज्याः स्थूल्ये मेदोहरे च॥",
+    "grantha": "CharakaSamhita", "sthana": "Sutrasthana", "adhyaya": 21, "shloka": 18, "language": "san",
+    "metadata": {"topics": ["weight", "obesity", "sthoulya", "medha"], "conditions": ["Sthoulya"], "formulation": "Yava Ahara", "content_type": "indication"}
+  },
+  {
+    "text": "For Sthoulya (obesity and weight loss), barley (Yava), Kodrava, and light heating foods are indicated. These reduce Meda dhatu and support healthy weight reduction.",
+    "grantha": "ClinicalCompendium", "sthana": "WeightManagement", "adhyaya": 1, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["weight", "weight_loss", "obesity", "sthoulya"], "conditions": ["Sthoulya"], "formulation": "Yava Ahara", "content_type": "indication"}
+  },
+  {
+    "text": "गुग्गुलुः स्थूल्यहरो लघुः कटुः उष्णश्च। मेदोव्रणशोफहरः प्रयोज्यः साधारणेण॥",
+    "grantha": "AshtangaHridayam", "sthana": "Chikitsasthana", "adhyaya": 14, "shloka": 30, "language": "san",
+    "metadata": {"topics": ["weight", "sthoulya", "obesity"], "conditions": ["Sthoulya"], "formulation": "Guggulu Yoga", "dravya": "Guggulu", "content_type": "indication"}
+  },
+  {
+    "text": "Guggulu formulations are traditionally used in Sthoulya to reduce excess Meda (fat tissue), support weight loss, and improve lipid metabolism.",
+    "grantha": "ClinicalCompendium", "sthana": "WeightManagement", "adhyaya": 2, "shloka": 2, "language": "en",
+    "metadata": {"topics": ["weight", "weight_loss", "sthoulya", "medha"], "conditions": ["Sthoulya"], "formulation": "Guggulu Yoga", "dravya": "Guggulu", "content_type": "indication"}
+  },
+  {
+    "text": "त्रिफला कषायं लघु च। मेदः स्थौल्ये प्रयोज्यं दीपनं च॥",
+    "grantha": "SushrutaSamhita", "sthana": "Chikitsasthana", "adhyaya": 11, "shloka": 8, "language": "san",
+    "metadata": {"topics": ["weight", "sthoulya", "digestion"], "conditions": ["Sthoulya"], "formulation": "Triphala Kashaya", "dravya": "Triphala", "content_type": "indication"}
+  },
+  {
+    "text": "Triphala decoction is light, digestive, and indicated in Sthoulya and Meda disorders to support weight management and metabolic balance.",
+    "grantha": "ClinicalCompendium", "sthana": "WeightManagement", "adhyaya": 3, "shloka": 1, "language": "en",
+    "metadata": {"topics": ["weight", "weight_loss", "sthoulya"], "conditions": ["Sthoulya"], "formulation": "Triphala Kashaya", "content_type": "indication"}
+  }
+]
