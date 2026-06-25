@@ -1,13 +1,15 @@
-# Exclude heavy Docker stack only — keep src/, api/, data/corpus.json for serverless API
+# Node API reads data/corpus.json — exclude Python backend only
 /requirements.txt
+/requirements-lite.txt
+/requirements-vercel.txt
+/src/
+/scripts/
+/tests/
 /docker-compose.yml
 /Dockerfile
 /Dockerfile.lite
 /render.yaml
-/scripts/
-/tests/
 /data/lite_store.json
-/data/manuscripts/
 /.env
 /.env.full
 /.venv/
